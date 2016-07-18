@@ -1,5 +1,10 @@
 create or replace package utl_http_multipart as 
 
+  /**
+    * @author Rafael Uchôa
+    * @email rafael@naskar.com.br
+    */
+
   type part is record (
     ds_header varchar2(2048),
     ds_value varchar2(1024),

@@ -1,5 +1,10 @@
 create or replace package body utl_http_multipart as
 
+  /**
+    * @author Rafael Uchôa
+    * @email rafael@naskar.com.br
+    */
+
   v_newline constant varchar2(10) := chr(13) || chr(10);
   v_boundary constant varchar2(60) := '---------------------------30837156019033';
   v_end constant varchar2(10) := '--';
