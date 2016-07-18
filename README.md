@@ -2,15 +2,16 @@
 Simple package to send files and parameters to an url using POST multipart form-data.
 
 # Usage
+
+```
 declare
 	v_req utl_http.req;
 	v_resp utl_http.resp;
 	v_parts utl_http_multipart.parts := utl_http_multipart.parts();
-
 begin
 	...
   
-	utl_http_multipart.add_file(v_parts, 'binaryfile', 'binaryfile', 'application/octet-stream', bfile_key);
+	utl_http_multipart.add_file(v_parts, 'key', 'rafael.p12', 'application/octet-stream', bfile_key);
 	utl_http_multipart.add_param(v_parts, 'type', 'PKCS12');
 	utl_http_multipart.add_param(v_parts, 'alias', 'rafael');
 
@@ -26,3 +27,4 @@ begin
 	
 	...
 end
+```
